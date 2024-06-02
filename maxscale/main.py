@@ -4,8 +4,7 @@
 # Student name: Van Vuong
 # Instructor: Christine Sutton
 
-import mysql.connector
-import tabulate
+
 
 
 
