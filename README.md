@@ -58,5 +58,19 @@ A VM runs Lubuntu 22.04 OS with the following services:
 * Docker: Refer this link for the installation guide: [How To Install and Use Docker on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
 * Docker Compose: 
 ``` 
-sudo apt install docker-compose
+    sudo apt install docker-compose
+```
+* Update VM:
+```
+    sudo apt update
+    sudo apt upgrade -y
+```
+## Setup and configure
+### Clone Maxscale Container with a three node master-slave cluster
+```
+    git clone https://github.com/zohan/maxscale-docker/
+```
+### Start the cluster
+```
+    docker-compose up -d
 ```
