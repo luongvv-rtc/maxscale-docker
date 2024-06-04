@@ -65,6 +65,9 @@ A VM runs Lubuntu 22.04 OS with the following services:
     sudo apt update
     sudo apt upgrade -y
 ```
+Python IDE with the following packets:
+* mysql-connector
+
 ## Setup and configure
 ### Clone Maxscale Container with a three node master-slave cluster
 ```
@@ -78,3 +81,7 @@ A VM runs Lubuntu 22.04 OS with the following services:
 ```
     docker-compose exec maxscale maxctrl list servers
 ```
+# Special Thanks
+Thank you, Zachary Rubin, for the Maxscale Container with a three node master-slave cluster.
+
+Thank you, Christine Sutton, for all the guidance on this project and during the course.
