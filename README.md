@@ -74,3 +74,7 @@ A VM runs Lubuntu 22.04 OS with the following services:
 ```
     docker-compose up -d
 ```
+### List the servers being managed by MariaDB MaxScale within a Docker container
+```
+    docker-compose exec maxscale maxctrl list servers
+```
