@@ -65,8 +65,9 @@ A VM runs Lubuntu 22.04 OS with the following services:
     sudo apt update
     sudo apt upgrade -y
 ```
-** Install Maria Database
-Refer this link for the installation guide: [How To Install MariaDB on Ubuntu 22.04] (https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-22-04)
+
+Install Maria Database:
+Refer this link for the installation guide: [How To Install MariaDB on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-22-04)
 
 Python IDE with the following packets:
 * mysql-connector
