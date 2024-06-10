@@ -85,7 +85,6 @@ Python IDE with the following packets:
 ```
     docker-compose exec maxscale maxctrl list servers
 ```
-
 ┌─────────┬─────────┬──────┬─────────────┬─────────────────┬──────┬─────────────────┐
 │ Server  │ Address │ Port │ Connections │ State           │ GTID │ Monitor         │
 ├─────────┼─────────┼──────┼─────────────┼─────────────────┼──────┼─────────────────┤
