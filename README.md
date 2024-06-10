@@ -85,6 +85,21 @@ Python IDE with the following packets:
 ```
     docker-compose exec maxscale maxctrl list servers
 ```
+
+┌─────────┬─────────┬──────┬─────────────┬─────────────────┬──────┬─────────────────┐
+│ Server  │ Address │ Port │ Connections │ State           │ GTID │ Monitor         │
+├─────────┼─────────┼──────┼─────────────┼─────────────────┼──────┼─────────────────┤
+│ server1 │ master  │ 3306 │ 0           │ Master, Running │      │ MariaDB-Monitor │
+├─────────┼─────────┼──────┼─────────────┼─────────────────┼──────┼─────────────────┤
+│ server2 │ slave1  │ 3306 │ 0           │ Slave, Running  │      │ MariaDB-Monitor │
+├─────────┼─────────┼──────┼─────────────┼─────────────────┼──────┼─────────────────┤
+│ server3 │ slave2  │ 3306 │ 0           │ Slave, Running  │      │ MariaDB-Monitor │
+└─────────┴─────────┴──────┴─────────────┴─────────────────┴──────┴─────────────────┘
+
+
+
+
+
 # Special Thanks
 Thank you, Zachary Rubin, for the Maxscale Container with a three node master-slave cluster.
 
