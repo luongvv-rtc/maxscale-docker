@@ -170,6 +170,15 @@ sudo docker inspect maxscale_maxscale_1
 ### Run Python scripts
 Using Pycharm and open the file "main.py".
 
+### Close the container
+```
+sudo docker-compose down
+```
+or
+```
+sudo docker-compose down --remove-orphans
+```
+
 ## Outputs
 
 <details>
