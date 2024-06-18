@@ -172,6 +172,41 @@ Using Pycharm and open the file "main.py".
 
 ## Outputs
 
+<details>
+<summary>1. The largest zipcode in zipcodes_one</summary>
+
+The largest zipcode in zipcodes_one:
+
+47750
+
+</details>
+
+<details>
+<summary>2. All zipcodes where state=KY (Kentucky)</summary>
+
+2. The 
+
+
+
+</details>
+
+<details>
+<summary>3. All zipcodes between 40000 and 41000</summary>
+
+3. The 
+
+
+
+</details>
+
+<details>
+<summary>4. The TotalWages column where state=PA (Pennsylvania)</summary>
+
+4. The
+
+
+
+</details>
 
 
 # Special Thanks
