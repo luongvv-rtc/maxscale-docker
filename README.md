@@ -76,7 +76,7 @@ Python IDE with the following packets:
 
 ### Fork Maxscale Container
 ```
-    git clone https://github.com/zohan/maxscale-docker/
+git clone https://github.com/zohan/maxscale-docker/
 ```
 
 ### Configure the Maxscale container
@@ -87,11 +87,11 @@ Edit the following file to meet the requirements:
 
 ### Start the container
 ```
-    docker-compose up -d
+docker-compose up -d
 ```
 ### List the servers
 ```
-    docker-compose exec maxscale maxctrl list servers
+docker-compose exec maxscale maxctrl list servers
 
 ┌─────────┬─────────┬──────┬─────────────┬─────────────────┬──────┬─────────────────┐
 │ Server  │ Address │ Port │ Connections │ State           │ GTID │ Monitor         │
@@ -132,35 +132,33 @@ MariaDB [(none)]>
 
 ### Close the container
 ```
-	sudo docker-compose down
+sudo docker-compose down
 ```
 
 ## Usage
 
 ### Start Container
 ```
-    cd maxscale-docker/maxscale
-	docker-compose up -d
+cd maxscale-docker/maxscale
+docker-compose up -d
 ```
 ### Verify list of servers if they are up and functional
 ```
-	sudo docker-compose exec maxscale maxctrl list servers
+sudo docker-compose exec maxscale maxctrl list servers
 ```
 
 ### Checking connection to MariaDB
 ```
-	sudo mariadb -umaxuser -pmaxpwd -h 127.0.0.1 -P 4000
+sudo mariadb -umaxuser -pmaxpwd -h 127.0.0.1 -P 4000
 ```
 
 ### Identify the IP address of your Maxscale container
 ```
-	sudo docker inspect maxscale_maxscale_1
+sudo docker inspect maxscale_maxscale_1
 ```
 
 ### Run Python scripts
-```
-	python3 main.py
-```
+Using Pycharm and open the file "main.py".
 
 ## Outputs
 
