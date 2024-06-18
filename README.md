@@ -1,8 +1,7 @@
 # Project: Database Sharding by using MariaDB Maxscale Docker
 
 ## Table of Content
-
-- [Overview of Database Sharding](#overview of database sharding)
+- [Overview of Database Sharding] (#overview of database sharding)
 - [Overview of MariaDB Maxscale] (#overview of mariaDB maxscale)
 - [Prerequisites] (#prerequisites)
 - [Setup and configure] (#setup and configure)
