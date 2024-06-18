@@ -90,7 +90,6 @@ Edit the following file to meet the requirements:
 ### List the servers
 ```
     docker-compose exec maxscale maxctrl list servers
-```
 
 ┌─────────┬─────────┬──────┬─────────────┬─────────────────┬──────┬─────────────────┐
 │ Server  │ Address │ Port │ Connections │ State           │ GTID │ Monitor         │
@@ -99,6 +98,7 @@ Edit the following file to meet the requirements:
 ├─────────┼─────────┼──────┼─────────────┼─────────────────┼──────┼─────────────────┤
 │ server2 │ server2 │ 3306 │ 0           │ Running         │      │ MariaDB-Monitor │
 └─────────┴─────────┴──────┴─────────────┴─────────────────┴──────┴─────────────────┘
+```
 
 ### Verify the connection to MariaDB
 ```
