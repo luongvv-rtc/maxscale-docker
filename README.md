@@ -2,12 +2,12 @@
 
 ## Table of Content
 
-* [Overview of Database Sharding](#overview of database sharding)
-* [Overview of MariaDB Maxscale] (#overview of mariaDB maxscale)
-* [Prerequisites] (#prerequisites)
-* [Setup and configure] (#setup and configure)
-* [Usage] (#usage)
-* [Outputs] (#outputs)
+- [Overview of Database Sharding](#overview of database sharding)
+- [Overview of MariaDB Maxscale] (#overview of mariaDB maxscale)
+- [Prerequisites] (#prerequisites)
+- [Setup and configure] (#setup and configure)
+- [Usage] (#usage)
+- [Outputs] (#outputs)
 
 ## Overview of Database Sharding
 Database sharding is a method of distributing a single database across multiple servers or database instances, known as shards. Each shard contains a portion of the data, and together they form the entire dataset. This approach helps to improve performance, scalability, and manageability of the database. Here are the key aspects and benefits of database sharding
