@@ -45,7 +45,7 @@ def print_table(data, title):
 def main():
     db = db_connection()
     cursor = db.cursor()
- # 1. The largest zipcode in zipcodes_one
+# 1. The largest zipcode in zipcodes_one
     print('------------------------------------------')
     print('| 1. The largest zipcode in zipcodes_one |')
     print('------------------------------------------')
@@ -64,9 +64,19 @@ def main():
     print_table(split_list_zipcode_KY, 'All zipcodes where state = KY')
 
 #3. All zipcodes between 40000 and 41000
+    print('-------------------------------------------')
+    print('| 3. All zipcodes between 40000 and 41000 |')
+    print('-------------------------------------------')
+    query_range_zipcodes_one = "SELECT Zipcode FROM zipcodes_one.zipcodes_one WHERE zipcode BETWEEN 40000 AND 41000;"
+    query_range_zipcodes_two = "SELECT Zipcode FROM zipcodes_two.zipcodes_two WHERE zipcode BETWEEN 40000 AND 41000;"
+    range_zipcodes = fetch_results(cursor, query_range_zipcodes_one) + fetch_results(cursor, query_range_zipcodes_two)
+    range_zipcodes_split = split_list(range_zipcodes, 20)
+    print_table(range_zipcodes_split, 'All zipcodes between 40000 and 41000')
 
 #4. The TotalWages column where state=PA (Pennsylvania)
-
+    print('---------------------------------------------------------')
+    print('| 4. The TotalWages column where state=PA (Pennsylvania) |')
+    print('----------------------------------------------------------')
 if __name__ == "__main__":
     main()
 
