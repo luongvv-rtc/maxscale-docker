@@ -2,8 +2,8 @@
 
 ## Table of Content
 
-- [Overview of Database Sharding] (#overview-of-database-sharding)
-- [Overview of MariaDB Maxscale] (#overview of mariaDB maxscale)
+- [Overview of Database Sharding](#overview-of-database-sharding)
+- [Overview of MariaDB Maxscale](#overview-of-mariaDB-maxscale)
 - [Prerequisites] (#prerequisites)
 - [Setup and configure] (#setup and configure)
 - [Usage] (#usage)
