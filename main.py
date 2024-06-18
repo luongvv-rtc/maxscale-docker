@@ -11,7 +11,7 @@ from tabulate import tabulate
 # Connect to Database Servers
 def db_connection():
     return mysql.connector.connect(
-        host="10.0.2.15",
+        host="172.18.0.4",
         port="4000",
         user="maxuser",
         password="maxpwd"

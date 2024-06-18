@@ -72,12 +72,14 @@ Refer this link for the installation guide: [How To Install MariaDB on Ubuntu 22
 Python IDE with the following packets:
 * mysql-connector
 
+##Setup and configure
+
 ### Fork Maxscale Container
 ```
     git clone https://github.com/zohan/maxscale-docker/
 ```
 
-### Setup and configure
+### Configure the Maxscale container
 Edit the following file to meet the requirements:
 * docker-compose.yml
 * example.cnf
@@ -128,9 +130,45 @@ MariaDB [(none)]>
 	
 ```
 
+### Close the container
+```
+	sudo docker-compose down
+```
+
+## Usage
+
+### Start Container
+```
+    cd maxscale-docker/maxscale
+	docker-compose up -d
+```
+### Verify list of servers if they are up and functional
+```
+	sudo docker-compose exec maxscale maxctrl list servers
+```
+
+### Checking connection to MariaDB
+```
+	sudo mariadb -umaxuser -pmaxpwd -h 127.0.0.1 -P 4000
+```
+
+### Identify the IP address of your Maxscale container
+```
+	sudo docker inspect maxscale_maxscale_1
+```
+
+### Run Python scripts
+```
+	python3 main.py
+```
+
+## Outputs
+
 
 
 # Special Thanks
-Thank you, Zachary Rubin, for the Maxscale Container with a three node master-slave cluster.
 
 Thank you, Christine Sutton, for all the guidance on this project and during the course.
+
+Thank you, Zachary Rubin, for the Maxscale Container with a three node master-slave cluster.
+
