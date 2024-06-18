@@ -1,4 +1,14 @@
 # Project: Database Sharding by using MariaDB Maxscale Docker
+
+## Table of Content
+
+* [Overview of Database Sharding](#Overview of Database Sharding)
+* [Overview of MariaDB Maxscale] (#Overview of MariaDB Maxscale)
+* [Prerequisites] (#Prerequisites)
+* [Setup and configure] (#Setup and configure)
+* [Usage] (#Usage)
+* [Outputs] (#Outputs)
+
 ## Overview of Database Sharding
 Database sharding is a method of distributing a single database across multiple servers or database instances, known as shards. Each shard contains a portion of the data, and together they form the entire dataset. This approach helps to improve performance, scalability, and manageability of the database. Here are the key aspects and benefits of database sharding
 
@@ -72,7 +82,7 @@ Refer this link for the installation guide: [How To Install MariaDB on Ubuntu 22
 Python IDE with the following packets:
 * mysql-connector
 
-##Setup and configure
+## Setup and configure
 
 ### Fork Maxscale Container
 ```
