@@ -72,7 +72,7 @@ Refer this link for the installation guide: [How To Install MariaDB on Ubuntu 22
 Python IDE with the following packets:
 * mysql-connector
 
-## Fork Maxscale Container
+### Fork Maxscale Container
 ```
     git clone https://github.com/zohan/maxscale-docker/
 ```
@@ -83,7 +83,7 @@ Edit the following file to meet the requirements:
 * example.cnf
 * users.sql
 
-### Start the cluster
+### Start the container
 ```
     docker-compose up -d
 ```
@@ -91,6 +91,7 @@ Edit the following file to meet the requirements:
 ```
     docker-compose exec maxscale maxctrl list servers
 ```
+
 ┌─────────┬─────────┬──────┬─────────────┬─────────────────┬──────┬─────────────────┐
 │ Server  │ Address │ Port │ Connections │ State           │ GTID │ Monitor         │
 ├─────────┼─────────┼──────┼─────────────┼─────────────────┼──────┼─────────────────┤
@@ -99,6 +100,33 @@ Edit the following file to meet the requirements:
 │ server2 │ server2 │ 3306 │ 0           │ Running         │      │ MariaDB-Monitor │
 └─────────┴─────────┴──────┴─────────────┴─────────────────┴──────┴─────────────────┘
 
+### Verify the connection to MariaDB
+```
+mariadb -umaxuser -pmaxpwd -h 127.0.0.1 -P 4000
+
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 1
+Server version: 10.3.39-MariaDB-1:10.3.39+maria~ubu2004-log mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| zipcodes_one       |
+| zipcodes_two       |
++--------------------+
+5 rows in set (0.001 sec)
+
+MariaDB [(none)]> 
+	
+```
 
 
 
