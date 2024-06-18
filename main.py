@@ -46,21 +46,22 @@ def main():
     db = db_connection()
     cursor = db.cursor()
  # 1. The largest zipcode in zipcodes_one
-    print('1. The largest zipcode in zipcodes_one:')
+    print('------------------------------------------')
+    print('| 1. The largest zipcode in zipcodes_one |')
+    print('------------------------------------------')
     query_largest_zipcode = "SELECT Zipcode FROM zipcodes_one.zipcodes_one ORDER BY Zipcode DESC LIMIT 1;"
     result_largest_zipcode = fetch_results(cursor, query_largest_zipcode)
     print(result_largest_zipcode[0] if result_largest_zipcode else 'No data found')
 
 #2. All zipcodes where state=KY (Kentucky). You may return just the zipcode column, or all columns.
-    print('All zipcodes where state=KY (Kentucky):')
+    print('--------------------------------------------')
+    print('| 2. All zipcodes where state=KY (Kentucky)|')
+    print('--------------------------------------------')
     query1_zipcodes_KY = "SELECT Zipcode FROM zipcodes_one.zipcodes_one WHERE State = 'KY';"
     query2_zipcodes_KY = "SELECT Zipcode FROM zipcodes_two.zipcodes_two WHERE State = 'KY';"
-    result1_zipcodes_KY = fetch_results(cursor, query1_zipcodes_KY)
-    result1_zipcodes_KY = fetch_results(cursor, query2_zipcodes_KY)
-   # split_list_zipcode_KY = split_list(combined_result_zipcodes_KY, 20)
-   # print_table(split_list_zipcode_KY, 'All zipcodes where state = KY')
-
-
+    combined_result_zipcodes_KY = fetch_results(cursor, query1_zipcodes_KY) + fetch_results(cursor, query2_zipcodes_KY)
+    split_list_zipcode_KY = split_list(combined_result_zipcodes_KY, 20)
+    print_table(split_list_zipcode_KY, 'All zipcodes where state = KY')
 
 #3. All zipcodes between 40000 and 41000
 
