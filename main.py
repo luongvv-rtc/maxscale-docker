@@ -1,6 +1,6 @@
 # CNE 370 Virtualization
 # June 2024
-# Project: Database Sharding
+# Project: Database Sharding with Maxscale
 # Student name: Van Vuong
 # Instructor: Christine Sutton
 
@@ -11,7 +11,7 @@ from tabulate import tabulate
 # Connect to Database Servers
 def db_connection():
     return mysql.connector.connect(
-        host="192.168.68.104",
+        host="10.0.2.15",
         port="4000",
         user="maxuser",
         password="maxpwd"

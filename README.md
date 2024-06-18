@@ -72,29 +72,32 @@ Refer this link for the installation guide: [How To Install MariaDB on Ubuntu 22
 Python IDE with the following packets:
 * mysql-connector
 
-## Setup and configure
-### Clone Maxscale Container with a three node master-slave cluster
+## Fork Maxscale Container
 ```
     git clone https://github.com/zohan/maxscale-docker/
 ```
+
+### Setup and configure
+Edit the following file to meet the requirements:
+* docker-compose.yml
+* example.cnf
+* users.sql
+
 ### Start the cluster
 ```
     docker-compose up -d
 ```
-### List the servers being managed by MariaDB MaxScale within a Docker container
+### List the servers
 ```
     docker-compose exec maxscale maxctrl list servers
 ```
 ┌─────────┬─────────┬──────┬─────────────┬─────────────────┬──────┬─────────────────┐
 │ Server  │ Address │ Port │ Connections │ State           │ GTID │ Monitor         │
 ├─────────┼─────────┼──────┼─────────────┼─────────────────┼──────┼─────────────────┤
-│ server1 │ master  │ 3306 │ 0           │ Master, Running │      │ MariaDB-Monitor │
+│ server1 │ server1 │ 3306 │ 0           │ Master, Running │      │ MariaDB-Monitor │
 ├─────────┼─────────┼──────┼─────────────┼─────────────────┼──────┼─────────────────┤
-│ server2 │ slave1  │ 3306 │ 0           │ Slave, Running  │      │ MariaDB-Monitor │
-├─────────┼─────────┼──────┼─────────────┼─────────────────┼──────┼─────────────────┤
-│ server3 │ slave2  │ 3306 │ 0           │ Slave, Running  │      │ MariaDB-Monitor │
+│ server2 │ server2 │ 3306 │ 0           │ Running         │      │ MariaDB-Monitor │
 └─────────┴─────────┴──────┴─────────────┴─────────────────┴──────┴─────────────────┘
-
 
 
 
