@@ -1,6 +1,6 @@
 # CNE 370 Virtualization
 # June 2024
-# Project: Database Sharding with Maxscale
+# Project: Database Sharding with Maxscale and MariaDB
 # Student name: Van Vuong
 # Instructor: Christine Sutton
 
@@ -11,7 +11,7 @@ from tabulate import tabulate
 # Connect to Database Servers
 def db_connection():
     return mysql.connector.connect(
-        host="172.18.0.4",
+        host="172.18.0.4", #Change to the IP Address is listed after this command: "sudo docker inspect maxscale_maxscale_1"
         port="4000",
         user="maxuser",
         password="maxpwd"
@@ -77,6 +77,12 @@ def main():
     print('---------------------------------------------------------')
     print('| 4. The TotalWages column where state=PA (Pennsylvania) |')
     print('----------------------------------------------------------')
+    query1_pa_total_wages = "SELECT TotalWages FROM zipcodes_one.zipcodes_one WHERE state = 'PA';"
+    query2_pa_total_wages = "SELECT TotalWages FROM zipcodes_two.zipcodes_two WHERE state = 'PA';"
+    pa_total_wages = fetch_results(cursor, query1_pa_total_wages) + fetch_results(cursor, query2_pa_total_wages)
+    pa_total_wages_split = split_list(pa_total_wages, 10)
+    print_table(pa_total_wages_split, 'The TotalWages column where state = PA')
+
 if __name__ == "__main__":
     main()
 
