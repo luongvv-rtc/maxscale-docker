@@ -11,7 +11,7 @@ from tabulate import tabulate
 # Connect to Database Servers
 def db_connection():
     return mysql.connector.connect(
-        host="192.168.68.105", #Change to the IP Address is listed after this command: "sudo docker inspect maxscale_maxscale_1"
+        host="maxscale_container_IP_Address", #Change to the IP Address is listed after this command: "sudo docker inspect maxscale_maxscale_1"
         port="4000",
         user="maxuser",
         password="maxpwd"
@@ -82,6 +82,9 @@ def main():
     pa_total_wages = fetch_results(cursor, query1_pa_total_wages) + fetch_results(cursor, query2_pa_total_wages)
     pa_total_wages_split = split_list(pa_total_wages, 8)
     print_table(pa_total_wages_split, 'The TotalWages column where state = PA')
+
+    cursor.close()
+    db.close()
 
 if __name__ == "__main__":
     main()
