@@ -11,7 +11,7 @@ from tabulate import tabulate
 # Connect to Database Servers
 def db_connection():
     return mysql.connector.connect(
-        host="172.18.0.4", #Change to the IP Address is listed after this command: "sudo docker inspect maxscale_maxscale_1"
+        host="192.168.68.105", #Change to the IP Address is listed after this command: "sudo docker inspect maxscale_maxscale_1"
         port="4000",
         user="maxuser",
         password="maxpwd"
@@ -51,7 +51,7 @@ def main():
     print('------------------------------------------')
     query_largest_zipcode = "SELECT Zipcode FROM zipcodes_one.zipcodes_one ORDER BY Zipcode DESC LIMIT 1;"
     result_largest_zipcode = fetch_results(cursor, query_largest_zipcode)
-    print(result_largest_zipcode[0] if result_largest_zipcode else 'No data found')
+    print('The largest zipcode in zipcodes_one: ',result_largest_zipcode[0] if result_largest_zipcode else 'No data found')
 
 #2. All zipcodes where state=KY (Kentucky). You may return just the zipcode column, or all columns.
     print('--------------------------------------------')

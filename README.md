@@ -184,9 +184,10 @@ sudo docker-compose down --remove-orphans
 <details>
 <summary>1. The largest zipcode in zipcodes_one</summary>
 
-The largest zipcode in zipcodes_one:
-
-47750
+------------------------------------------
+| 1. The largest zipcode in zipcodes_one |
+------------------------------------------
+The largest zipcode in zipcodes_one:  47750
 
 </details>
 
