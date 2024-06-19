@@ -60,7 +60,7 @@ def main():
     query1_zipcodes_KY = "SELECT Zipcode FROM zipcodes_one.zipcodes_one WHERE State = 'KY';"
     query2_zipcodes_KY = "SELECT Zipcode FROM zipcodes_two.zipcodes_two WHERE State = 'KY';"
     combined_result_zipcodes_KY = fetch_results(cursor, query1_zipcodes_KY) + fetch_results(cursor, query2_zipcodes_KY)
-    split_list_zipcode_KY = split_list(combined_result_zipcodes_KY, 20)
+    split_list_zipcode_KY = split_list(combined_result_zipcodes_KY, 10)
     print_table(split_list_zipcode_KY, 'All zipcodes where state = KY')
 
 #3. All zipcodes between 40000 and 41000
@@ -70,7 +70,7 @@ def main():
     query_range_zipcodes_one = "SELECT Zipcode FROM zipcodes_one.zipcodes_one WHERE zipcode BETWEEN 40000 AND 41000;"
     query_range_zipcodes_two = "SELECT Zipcode FROM zipcodes_two.zipcodes_two WHERE zipcode BETWEEN 40000 AND 41000;"
     range_zipcodes = fetch_results(cursor, query_range_zipcodes_one) + fetch_results(cursor, query_range_zipcodes_two)
-    range_zipcodes_split = split_list(range_zipcodes, 20)
+    range_zipcodes_split = split_list(range_zipcodes, 10)
     print_table(range_zipcodes_split, 'All zipcodes between 40000 and 41000')
 
 #4. The TotalWages column where state=PA (Pennsylvania)
