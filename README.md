@@ -175,7 +175,16 @@ sudo docker inspect maxscale_maxscale_1
 ```
 
 ### Run Python scripts
-Using Pycharm and open the file "main.py".
+Open maim.py file:
+```
+sudo nano main.py
+```
+
+Then replace the host's IP Address with the IP Address of Maxscale Container.
+Run the scripts:
+```
+sudo python3 main.py
+```
 
 ### Close the container
 ```
