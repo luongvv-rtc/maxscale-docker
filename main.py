@@ -80,7 +80,7 @@ def main():
     query1_pa_total_wages = "SELECT TotalWages FROM zipcodes_one.zipcodes_one WHERE state = 'PA';"
     query2_pa_total_wages = "SELECT TotalWages FROM zipcodes_two.zipcodes_two WHERE state = 'PA';"
     pa_total_wages = fetch_results(cursor, query1_pa_total_wages) + fetch_results(cursor, query2_pa_total_wages)
-    pa_total_wages_split = split_list(pa_total_wages, 12)
+    pa_total_wages_split = split_list(pa_total_wages, 8)
     print_table(pa_total_wages_split, 'The TotalWages column where state = PA')
 
 if __name__ == "__main__":
